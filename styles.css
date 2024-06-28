@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    font-size: 1.2em; /* Increased base font size */
 }
 
 .container {
@@ -12,12 +13,12 @@ body {
 
 header {
     background: #fff;
-    padding: 20px 0;
+    padding: 30px 0; /* Increased padding */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 3em; /* Increased font size */
     margin: 0;
 }
 
@@ -28,34 +29,36 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 20px; /* Increased margin */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: 1.2em; /* Increased font size */
 }
 
 .about-section, .work-section, .contact-section {
-    padding: 60px 0;
+    padding: 80px 0; /* Increased padding */
 }
 
 .about-section h2, .work-section h2, .contact-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2.5em; /* Increased font size */
+    margin-bottom: 30px; /* Increased margin */
 }
 
 .work-gallery {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    overflow-x: auto;
+    gap: 30px; /* Increased gap */
+    padding-bottom: 20px; /* Increased padding */
 }
 
 .work-item {
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 0 0 30%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 20px; /* Increased padding */
     background: #fff;
 }
 
@@ -65,7 +68,8 @@ nav ul li a {
 }
 
 .work-item p {
-    margin-top: 10px;
+    margin-top: 20px; /* Increased margin */
+    font-size: 1.1em; /* Increased font size */
 }
 
 .contact-section form {
@@ -74,19 +78,20 @@ nav ul li a {
 }
 
 .contact-section form label {
-    margin-top: 10px;
+    margin-top: 20px; /* Increased margin */
+    font-size: 1.2em; /* Increased font size */
 }
 
-contact-section form input, .contact-section form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    font-size: 1em;
+.contact-section form input, .contact-section form textarea {
+    padding: 15px; /* Increased padding */
+    margin-top: 10px; /* Increased margin */
+    font-size: 1.1em; /* Increased font size */
 }
 
 .contact-section form button {
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 1em;
+    padding: 15px; /* Increased padding */
+    margin-top: 30px; /* Increased margin */
+    font-size: 1.2em; /* Increased font size */
     background: #333;
     color: #fff;
     border: none;
@@ -94,12 +99,53 @@ contact-section form input, .contact-section form textarea {
 }
 
 .contact-section p {
-    margin-top: 20px;
+    margin-top: 30px; /* Increased margin */
+    font-size: 1.2em; /* Increased font size */
 }
 
 footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0; /* Increased padding */
+    font-size: 1.2em; /* Increased font size */
+}
+
+.scrollable {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.scrollable .work-item {
+    display: inline-block;
+    margin-right: 30px; /* Increased margin */
+}
+
+#scrollbar1::-webkit-scrollbar {
+    width: 12px; /* Increased scrollbar width */
+}
+
+#scrollbar1::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+#scrollbar1::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border-right: 5px solid transparent;
+    background-clip: content-box;
+    background-color: #2b2b2b;
+}
+
+#scrollbar2::-webkit-scrollbar {
+    width: 12px; /* Increased scrollbar width */
+}
+
+#scrollbar2::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#scrollbar2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-clip: content-box;
+    background-color: #2b2b2b;
 }
