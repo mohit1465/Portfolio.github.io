@@ -6,12 +6,64 @@ body {
     color: #333;
 }
 
+
+
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .container {
     width: 90%;
     margin: 0 auto;
-    /* display: flex; */
+    display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.container h1 {
+    margin: 0;
+    color: #6B16E1;
+}
+.container h1 span {
+    color: #333;
+}
+.list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+.list-container ul li {
+    margin: 0;
+}
+.list-container ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container2{
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 header {
@@ -49,12 +101,13 @@ nav ul li a {
 
 .theme-line {
     margin-top: 10px;
-    font-size: 5em;
+    font-size: 4em;
     text-align: left;
 }
 
 .my-work-button {
-    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 80%;
     padding: 10px 20px;
     font-size: 1em;
     background: #6B16E1;
