@@ -3,62 +3,86 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    font-size: 1.2em; /* Increased base font size */
 }
 
 .container {
     width: 90%;
     margin: 0 auto;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
 }
 
 header {
     background: #fff;
-    padding: 30px 0; /* Increased padding */
+    padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 3em; /* Increased font size */
+    font-size: 2.5em;
     margin: 0;
+}
+
+nav {
+    margin-left: auto;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px; /* Increased margin */
+    margin: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    font-size: 1.2em; /* Increased font size */
+}
+
+.theme-line {
+    margin-top: 10px;
+    font-size: 5em;
+    text-align: left;
+}
+
+.my-work-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .about-section, .work-section, .contact-section {
-    padding: 80px 0; /* Increased padding */
+    padding: 60px 0;
 }
 
 .about-section h2, .work-section h2, .contact-section h2 {
-    font-size: 2.5em; /* Increased font size */
-    margin-bottom: 30px; /* Increased margin */
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .work-gallery {
     display: flex;
     overflow-x: auto;
-    gap: 30px; /* Increased gap */
-    padding-bottom: 20px; /* Increased padding */
+    gap: 20px;
+    padding-bottom: 10px;
 }
 
 .work-item {
     flex: 0 0 30%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px; /* Increased padding */
+    padding: 10px;
     background: #fff;
 }
 
@@ -68,8 +92,7 @@ nav ul li a {
 }
 
 .work-item p {
-    margin-top: 20px; /* Increased margin */
-    font-size: 1.1em; /* Increased font size */
+    margin-top: 10px;
 }
 
 .contact-section form {
@@ -78,20 +101,19 @@ nav ul li a {
 }
 
 .contact-section form label {
-    margin-top: 20px; /* Increased margin */
-    font-size: 1.2em; /* Increased font size */
+    margin-top: 10px;
 }
 
 .contact-section form input, .contact-section form textarea {
-    padding: 15px; /* Increased padding */
-    margin-top: 10px; /* Increased margin */
-    font-size: 1.1em; /* Increased font size */
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1em;
 }
 
 .contact-section form button {
-    padding: 15px; /* Increased padding */
-    margin-top: 30px; /* Increased margin */
-    font-size: 1.2em; /* Increased font size */
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1em;
     background: #333;
     color: #fff;
     border: none;
@@ -99,16 +121,14 @@ nav ul li a {
 }
 
 .contact-section p {
-    margin-top: 30px; /* Increased margin */
-    font-size: 1.2em; /* Increased font size */
+    margin-top: 20px;
 }
 
 footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 30px 0; /* Increased padding */
-    font-size: 1.2em; /* Increased font size */
+    padding: 20px 0;
 }
 
 .scrollable {
@@ -118,11 +138,11 @@ footer {
 
 .scrollable .work-item {
     display: inline-block;
-    margin-right: 30px; /* Increased margin */
+    margin-right: 20px;
 }
 
 #scrollbar1::-webkit-scrollbar {
-    width: 12px; /* Increased scrollbar width */
+    width: 10px;
 }
 
 #scrollbar1::-webkit-scrollbar-track {
@@ -137,7 +157,7 @@ footer {
 }
 
 #scrollbar2::-webkit-scrollbar {
-    width: 12px; /* Increased scrollbar width */
+    width: 10px;
 }
 
 #scrollbar2::-webkit-scrollbar-track {
