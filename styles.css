@@ -1,4 +1,5 @@
 body {
+    background-color: #EFEFEF;
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
@@ -56,7 +57,7 @@ nav ul li a {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1em;
-    background: #333;
+    background: #6B16E1;
     color: #fff;
     border: none;
     cursor: pointer;
