@@ -77,7 +77,7 @@ nav ul li a {
     margin-top: 10px;
 }
 
-.contact-section form input, .contact-section form textarea {
+contact-section form input, .contact-section form textarea {
     padding: 10px;
     margin-top: 5px;
     font-size: 1em;
@@ -91,6 +91,10 @@ nav ul li a {
     color: #fff;
     border: none;
     cursor: pointer;
+}
+
+.contact-section p {
+    margin-top: 20px;
 }
 
 footer {
