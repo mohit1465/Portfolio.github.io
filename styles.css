@@ -5,7 +5,7 @@ body, html {
     font-family: 'Playfair Display', serif;
     background: rgb(19, 19, 19);
     color: white;
-    font-size: 20px; /* Increased base font size */
+    font-size: 16px; /* Increased base font size */
 }
 
 header {
@@ -53,7 +53,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2em; /* Increased font size */
+    font-size: 36px; /* Increased font size */
 }
 
 nav ul {
@@ -67,7 +67,7 @@ nav ul {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em; /* Increased font size */
+    font-size: 26px; /* Increased font size */
     position: relative;
     padding: 5px 0;
 }
@@ -158,7 +158,7 @@ nav a {
 }
 
 h2 {
-    font-size: 40px; /* Increased font size */
+    font-size: 26px; /* Increased font size */
     margin-bottom: 20px;
 }
 
@@ -166,12 +166,13 @@ h2 {
     max-width: 100%;
     margin: 0 auto;
     text-align: left;
-    font-size: 22px; /* Increased font size */
+    font-size: 18px; /* Increased font size */
 }
 
 .section ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .section ul li {
@@ -188,7 +189,7 @@ h2 {
     color: white;
     text-decoration: none;
     border: 1px solid white;
-    font-size: 22px; /* Increased font size */
+    font-size: 16px; /* Increased font size */
     transition: all 0.3s;
 }
 
@@ -208,8 +209,8 @@ h2 {
 }
 
 .gallery-images img {
-    width: 350px; /* Adjusted width */
-    height: 700px; /* Maintain 1:2 aspect ratio */
+    width: 300px; /* Adjusted width */
+    height: 600px; /* Maintain 1:2 aspect ratio */
     object-fit: cover; /* Ensures the image is cropped to fit the aspect ratio */
     border-radius: 5px;
     transition: transform 0.3s;
@@ -237,8 +238,8 @@ h2 {
 }
 
 .work-images img {
-    width: 400px; /* Set width and height to 450px */
-    height: 400px;
+    width: 350px; /* Set width and height to 450px */
+    height: 350px;
     border-radius: 5px;
     transition: transform 0.3s;
 }
@@ -251,7 +252,6 @@ h2 {
 
 /* General section styling */
 #contact.section {
-    padding: 60px 0;
     text-align: center;
     background-color: rgb(19, 19, 19);
 }
@@ -265,10 +265,9 @@ h2 {
 
 /* Heading styling */
 #contact h2 {
-    font-size: 2rem;
+    font-size: 26px;
     margin-bottom: 20px;
     color: #fff;
-    font-family: 'Playfair Display', serif;
 }
 
 /* Form styling */
@@ -287,7 +286,7 @@ h2 {
     border: 1px solid #fff;
     padding: 10px;
     margin: 10px;
-    font-size: 1rem;
+    font-size: 16px;
     font-family: 'Playfair Display', serif;
     width: 250%;
     max-width: 250%;
@@ -300,18 +299,18 @@ h2 {
     overflow: auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     #contact .container {
         padding: 10px;
     }
 
     #contact h2 {
-        font-size: 1.5rem;
+        font-size: 18px;
     }
 
     #contact input,
     #contact textarea {
-        font-size: 0.9rem;
+        font-size: 16px;
         width: 130%;
     }
 }
@@ -327,7 +326,7 @@ footer {
 
 footer p {
     margin: 15px 0;
-    font-size: 20px; /* Increased font size */
+    font-size: 18px; /* Increased font size */
 }
 
 .social-links {
@@ -348,7 +347,7 @@ footer p {
     height: 50px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     header .container {
         flex-direction: column;
     }
