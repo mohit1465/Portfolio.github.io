@@ -1,23 +1,125 @@
-/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kaushan+Script&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Jost', sans-serif;
     background: rgb(19, 19, 19);
     color: white;
     font-size: 16px; /* Increased base font size */
 }
 
-header {
-    background: rgb(19, 19, 19);
+.main {
+    width: calc(100% - 50px); /* Full width minus margin */
+    height: 50px;
+    background-color: black;
+    border-radius: 25px;
+    margin: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: white; /* Text color */
+    box-sizing: border-box;
+}
+.main .text {
+    font-size: 16px; /* Adjust text size as needed */
+}
+.main .nav {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Spacing between navigation items */
+}
+.main .nav a {
     color: white;
-    padding: 10px 30px;
-    position: relative;
-    border-bottom: solid 1px white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 17px; /* Adjusted height */
+    cursor: pointer;
+}
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s;
+}
+.cross .bar1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.cross .bar2 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mob-nav {
+    height: 40px;
+    background-color: black;
+    border-radius: 25px;
+    margin: 10px 25px; /* Adjust margin as needed */
+    display: none; /* Initially hidden */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: white; /* Text color */
+    box-sizing: border-box;
+    animation-duration: 0.75s; /* Duration of animation */
+    animation-fill-mode: forwards; /* Animation fill mode */
+}
+
+.mob-nav a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .main .nav {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .cross .mob-nav {
+        display: flex;
+    }
+    .mob-nav:nth-child(1) {
+        animation-delay: 1s; /* Delay for first .mob-nav */
+    }
+    .mob-nav:nth-child(2) {
+        animation-delay: 2s; /* Delay for second .mob-nav */
+    }
+    .mob-nav:nth-child(3) {
+        animation-delay: 3s; /* Delay for third .mob-nav */
+    }
+    .mob-nav:nth-child(4) {
+        animation-delay: 4s; /* Delay for fourth .mob-nav */
+    }
+}
+.content {
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-top: 20px;
 }
 
 .container {
-    width: 100%; /* Fill content width from left to right */
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -25,7 +127,58 @@ header {
     text-align: center;
 }
 
-/* Creative hover effect for PC view */
+.container h2{
+    color: rgb(179, 255, 0);
+    font-family: "Kaushan Script", cursive;
+}
+
+.nav-a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    color: white;
+    background: white;
+    transition: width 0.4s ease;
+}
+
+.nav-a:hover::after {
+    width: 100%;
+    left: 0;
+    color: rgb(179, 255, 0);
+    background: rgb(179, 255, 0);
+}
+
+
+/* 
+
+
+header {
+    margin: 25px;
+    background: rgba(255, 255, 255, 0.118);
+    border-radius: 25px;
+    color: white;
+    padding: 10px 30px;
+    position: relative;
+    box-shadow: 0 5px 20px rgb(0, 0, 0);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container h2{
+    color: rgb(179, 255, 0);
+    font-family: "Kaushan Script", cursive;
+}
+
 .container h2::after {
     content: '';
     position: absolute;
@@ -53,7 +206,16 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 36px; /* Increased font size */
+    font-size: 30px;
+    color: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    flex: 1;
+}
+
+h1 span {
+    color: rgb(179, 255, 0);
+    font-family: "Kaushan Script", cursive;
 }
 
 nav ul {
@@ -67,7 +229,7 @@ nav ul {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 26px; /* Increased font size */
+    font-size: 18px;
     position: relative;
     padding: 5px 0;
 }
@@ -81,6 +243,10 @@ nav a {
     align-items: center;
 }
 
+.splitscreen {
+    display: flex;
+  }
+  
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -89,37 +255,30 @@ nav a {
 
 .hamburger span {
     background: rgb(255, 255, 255);
-    height: 3px;
-    margin: 5.5px 0;
+    border-radius: 25px;
+    height: 4px;
+    margin: 5.5px 5.5px;
     width: 25px;
     transition: all 0.3s ease-in-out;
 }
 
 .mobile-menu {
-    display: none;
-    position: absolute;
-    top: 84.5px;
-    left: 0;
-    width: 100%;
-    background: rgb(19, 19, 19);
-    padding: 20px 0;
-    box-shadow: 0 2px 10px rgb(0, 0, 0);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 25px;
+    background-color: rgb(19, 19, 19);
 }
 
 .mobile-menu ul {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     list-style: none;
-    padding: 0 20px;
+    width: 100%;
+    background-color: antiquewhite;
 }
 
 .mobile-menu ul li a {
-    color: white;
-    text-decoration: none;
+    text-align: center;
 }
 
-/* Creative hover effect for PC view */
 .desktop-nav li a::after {
     content: '';
     position: absolute;
@@ -128,6 +287,7 @@ nav a {
     display: block;
     margin-top: 5px;
     right: 0;
+    color: white;
     background: white;
     transition: width 0.4s ease;
 }
@@ -135,7 +295,14 @@ nav a {
 .desktop-nav li a:hover::after {
     width: 100%;
     left: 0;
-    background: white;
+    color: rgb(179, 255, 0);
+    background: rgb(179, 255, 0);
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
@@ -148,13 +315,17 @@ nav a {
     .mobile-menu {
         display: none;
     }
-}
-
+} */
 
 .section {
     padding: 60px 20px;
-    background: rgb(19, 19, 19);
+    background:  transparent;
     margin: 20px 0;
+}
+
+.main h1 span {
+    color: rgb(179, 255, 0);
+    font-family: "Kaushan Script", cursive;
 }
 
 h2 {
@@ -179,26 +350,22 @@ h2 {
     margin-bottom: 15px;
 }
 
-
-
 .button {
     display: inline-block;
     margin: 20px 0;
-    background-color:rgb(19, 19, 19);
+    background-color: transparent;
     padding: 15px 25px;
     color: white;
     text-decoration: none;
     border: 1px solid white;
     font-size: 16px; /* Increased font size */
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .button:hover {
     background: white;
     color: rgb(19, 19, 19);
 }
-
-
 
 .gallery-images {
     margin-top: 5%;
@@ -219,8 +386,6 @@ h2 {
 .gallery-images img:hover {
     transform: scale(1.1);
 }
-
-
 
 .work-images {
     display: flex;
@@ -248,12 +413,11 @@ h2 {
     transform: scale(1.1);
 }
 
-
-
-/* General section styling */
-#contact.section {
-    text-align: center;
-    background-color: rgb(19, 19, 19);
+.container h2{
+    color: rgb(179, 255, 0);
+    font-family: "Kaushan Script", cursive;
+    font-size: 26px;
+    margin-bottom: 20px;
 }
 
 /* Container styling */
@@ -261,13 +425,6 @@ h2 {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-}
-
-/* Heading styling */
-#contact h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    color: #fff;
 }
 
 /* Form styling */
@@ -281,7 +438,7 @@ h2 {
 
 #contact input,
 #contact textarea {
-    background-color: #000;
+    background: rgb(19, 19, 19);
     color: #fff;
     border: 1px solid #fff;
     padding: 10px;
@@ -318,7 +475,7 @@ h2 {
 
 
 footer {
-    background: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.118);
     color: white;
     padding: 30px 0;
     text-align: center;
