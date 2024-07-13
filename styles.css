@@ -11,17 +11,41 @@ body, html {
     font-size: 16px; /* Increased base font size */
 }
 
-.cursor {
-    pointer-events: none;
+.custom-cursor {
     position: fixed;
-    margin-top: -20px;
-    margin-left: -20px;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.253);
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 16px; /* Adjust this to make the image fit within the desired boundary */
+    height: 16px; /* Adjust this to make the image fit within the desired boundary */
+    background: url('ASSETS/Main/Cursor.png') no-repeat center / contain;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none; /* Initially hidden */
+}
+
+.ripple {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 40px;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.253), 0 0 20px rgba(255, 255, 255, 0.253), 0 0 30px rgba(255, 255, 255, 0.253);
-    transition: transform 0.1s ease-out, background-color 0.3s ease-out;
+    border: 2px solid rgb(179, 255, 0); /* Adjust color as needed */
+    pointer-events: none;
+    animation: ripple-animation 1s linear;
+    opacity: 0;
+}
+
+@keyframes ripple-animation {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    to {
+        width: 100px; /* Adjust size as needed */
+        height: 100px; /* Adjust size as needed */
+        opacity: 0;
+    }
 }
 
 .Back{

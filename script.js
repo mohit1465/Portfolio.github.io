@@ -1,5 +1,21 @@
 var animationSpeed = 1000; // Adjust animation speed in milliseconds (1s = 1000ms)
 
+document.addEventListener('contextmenu', event=> event.preventDefault()); 
+document.onkeydown = function(e) { 
+if(event.keyCode == 123) { 
+return false; 
+} 
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+return false; 
+} 
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+return false; 
+} 
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+return false; 
+} 
+} 
+
 function toggleMenu() {
     var hamburger = document.getElementById('hamburger');
     var mobNavs = document.querySelectorAll('.mob-nav');
@@ -91,33 +107,37 @@ function topFunction() {
 }
 
 
-(function () {
+var customCursor = document.getElementById('customCursor');
 
-      const link = document.querySelectorAll('nav > .hover-this');
-      const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', function(e) {
+    customCursor.style.left = e.clientX + 'px';
+    customCursor.style.top = e.clientY + 'px';
+    customCursor.style.display = 'block'; // Show the cursor when moving
+});
 
-      const animateit = function (e) {
-            const span = this.querySelector('span');
-            const { offsetX: x, offsetY: y } = e,
-            { offsetWidth: width, offsetHeight: height } = this,
+document.addEventListener('mouseenter', function() {
+    customCursor.style.display = 'block'; // Show the cursor when entering the window
+});
 
-            move = 25,
-            xMove = x / width * (move * 2) - move,
-            yMove = y / height * (move * 2) - move;
+document.addEventListener('mouseleave', function() {
+    customCursor.style.display = 'none'; // Hide the cursor when leaving the window
+});
 
-            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+document.addEventListener('click', function(e) {
+    createRipple(e.clientX, e.clientY);
+});
 
-            if (e.type === 'mouseleave') span.style.transform = '';
-      };
+function createRipple(x, y) {
+    for (let i = 0; i < 2; i++) {
+        var ripple = document.createElement('div');
+        ripple.className = 'ripple';
+        ripple.style.left = (x - 50) + 'px'; // Adjust to position correctly
+        ripple.style.top = (y - 50) + 'px'; // Adjust to position correctly
+        document.body.appendChild(ripple);
 
-      const editCursor = e => {
-            const { clientX: x, clientY: y } = e;
-            cursor.style.left = x + 'px';
-            cursor.style.top = y + 'px';
-      };
-
-      link.forEach(b => b.addEventListener('mousemove', animateit));
-      link.forEach(b => b.addEventListener('mouseleave', animateit));
-      window.addEventListener('mousemove', editCursor);
-
-})();
+        // Remove the ripple after animation is complete
+        ripple.addEventListener('animationend', function() {
+            ripple.remove();
+        });
+    }
+}
