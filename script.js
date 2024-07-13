@@ -1,59 +1,60 @@
-// Function to close mobile menu
-document.getElementById('hamburger').addEventListener('click', function() {
-    this.classList.toggle('cross');
+var animationSpeed = 1000; // Adjust animation speed in milliseconds (1s = 1000ms)
+
+function toggleMenu() {
+    var hamburger = document.getElementById('hamburger');
     var mobNavs = document.querySelectorAll('.mob-nav');
-    for (var i = 0; i < mobNavs.length; i++) {
-        if (this.classList.contains('cross')) {
-            mobNavs[i].style.display = 'flex';
-            mobNavs[i].style.animation = 'slideInRight 0.5s forwards';
-        } else {
+    var content = document.querySelector('.content');
+    hamburger.classList.toggle('cross');
+    if (hamburger.classList.contains('cross')) {
+        for (var i = 0; i < mobNavs.length; i++) {
+            mobNavs[i].style.animation = `slideInRight ${animationSpeed / 1000}s forwards ${i * 0}s`; // Adjusted animation speed
+            setTimeout((function(nav, index) {
+                return function() {
+                    nav.style.display = 'flex';
+                    content.classList.add('hide-content'); // Slide down content
+                };
+            })(mobNavs[i], i), i * 200); // Adjust delay timing
+        }
+    } else {
+        for (var i = 0; i < mobNavs.length; i++) {
             mobNavs[i].style.animation = 'none';
             mobNavs[i].style.display = 'none';
         }
+        content.classList.remove('hide-content'); // Remove slide down effect
     }
-});
-
-
-
-function closeMobileMenu() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.style.display = 'none';
 }
 
-// Mobile Menu Toggle
-document.getElementById('hamburger').addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevents the click from bubbling up and triggering the document click listener
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (window.getComputedStyle(mobileMenu).display === 'none') {
-        mobileMenu.style.display = 'flex';
-    } else {
-        closeMobileMenu();
+function closeMenu() {
+    var hamburger = document.getElementById('hamburger');
+    var mobNavs = document.querySelectorAll('.mob-nav');
+    var content = document.querySelector('.content');
+    hamburger.classList.remove('cross');
+    for (var i = 0; i < mobNavs.length; i++) {
+        mobNavs[i].style.animation = 'none';
+        mobNavs[i].style.display = 'none';
     }
-});
+    content.classList.remove('hide-content'); // Remove slide down effect
+}
 
-// Close mobile menu when clicking navigation items
-const navLinks = document.querySelectorAll('#mobile-menu ul li a');
-navLinks.forEach(function(navLink) {
-    navLink.addEventListener('click', function() {
-        closeMobileMenu();
-    });
-});
+document.getElementById('hamburger').addEventListener('click', toggleMenu);
 
-// Close mobile menu when switching from mobile to desktop view
 window.addEventListener('resize', function() {
-    if (window.innerWidth >= 768) { // Assuming 768px is the breakpoint for desktop view
-        closeMobileMenu();
+    if (window.innerWidth > 700) {
+        closeMenu();
     }
 });
 
-// Close mobile menu when clicking outside of it
-document.addEventListener('click', function(event) {
-    const mobileMenu = document.getElementById('mobile-menu');
-    const hamburger = document.getElementById('hamburger');
-    if (!mobileMenu.contains(event.target) && event.target !== hamburger) {
-        mobileMenu.style.display = 'none';
+document.body.addEventListener('click', function(event) {
+    var isClickInside = document.querySelector('.main').contains(event.target) || document.querySelector('.mob-nav').contains(event.target);
+    if (!isClickInside) {
+        closeMenu();
     }
 });
+
+var mobNavLinks = document.querySelectorAll('.mob-nav a');
+for (var i = 0; i < mobNavLinks.length; i++) {
+    mobNavLinks[i].addEventListener('click', closeMenu);
+}
 
 // Form Validation
 document.querySelector('form').addEventListener('submit', function(e) {
@@ -66,3 +67,57 @@ document.querySelector('form').addEventListener('submit', function(e) {
         alert('Please fill out all fields.');
     }
 });
+
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 500px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document smoothly
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+(function () {
+
+      const link = document.querySelectorAll('nav > .hover-this');
+      const cursor = document.querySelector('.cursor');
+
+      const animateit = function (e) {
+            const span = this.querySelector('span');
+            const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+
+            move = 25,
+            xMove = x / width * (move * 2) - move,
+            yMove = y / height * (move * 2) - move;
+
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+            if (e.type === 'mouseleave') span.style.transform = '';
+      };
+
+      const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+      };
+
+      link.forEach(b => b.addEventListener('mousemove', animateit));
+      link.forEach(b => b.addEventListener('mouseleave', animateit));
+      window.addEventListener('mousemove', editCursor);
+
+})();

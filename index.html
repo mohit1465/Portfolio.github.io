@@ -10,15 +10,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div class="cursor"></div>
+
+    <div class="Back" onclick="topFunction()" id="myBtn"><h1>^</h1>
+    </div>
+
     <div class="main">
         <div class="text">
             <h1>Hey, <span>I am Mohit</span></h1>
         </div>
         <ul class="nav">
-            <li><a class="nav-a" href="#">Home</a></li>
-            <li><a class="nav-a" href="#">About</a></li>
-            <li><a class="nav-a" href="#">Services</a></li>
-            <li><a class="nav-a" href="#">Contact</a></li>
+            <li><a class="nav-a" href="#gallery">Gallery</a></li>
+            <li><a class="nav-a" href="#work">My Work</a></li>
+            <li><a class="nav-a" href="#contact">Contact</a></li>
+            <li><a class="nav-a" href="#about">About</a></li>
         </ul>
         <div class="hamburger" id="hamburger">
             <div class="bar1"></div>
@@ -26,10 +32,10 @@
         </div>
     </div>
 
-    <div class="mob-nav"><a href="#">Home</a></div>
-    <div class="mob-nav"><a href="#">About</a></div>
-    <div class="mob-nav"><a href="#">Services</a></div>
-    <div class="mob-nav"><a href="#">Contact</a></div>
+    <div class="mob-nav"><a href="#gallery">Gallery</a></div>
+    <div class="mob-nav"><a href="#work">My Work</a></div>
+    <div class="mob-nav"><a href="#contact">Contact</a></div>
+    <div class="mob-nav"><a href="#about">About</a></div>
     
     <section id="introduction" class="section">
         <div class="container">
@@ -60,9 +66,9 @@
             <h2>My Gallery Highlights</h2>
             <a href="#" class="button">View All Gallery</a>
             <div class="gallery-images">
-                <img src="ASSETS/Poster/BURGUR.png" alt="Gallery Image 1">
-                <img src="ASSETS/Poster/BURGUR.png" alt="Gallery Image 2">
-                <img src="ASSETS/Poster/BURGUR.png" alt="Gallery Image 3">
+                <img src="ASSETS/Poster/Gellery 1.png" alt="Gallery Image 1">
+                <img src="ASSETS/Poster/Gellery 1.png" alt="Gallery Image 2">
+                <img src="ASSETS/Poster/Gellery 1.png" alt="Gallery Image 3">
             </div>
         </div>
     </section>
@@ -121,7 +127,7 @@
 
     <footer id="about" align="center">
         <div class="container">
-            <p>Here is Info about me</p>
+            <h2>Here is Info about me</h2>
             <p>mohitdahmewal@gmail.com</p>
             <p>+91 83075 21465</p>
             <div class="social-links">
@@ -131,12 +137,6 @@
             <p>© 2024 Mohit Yadav. All rights reserved.</p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
