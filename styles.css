@@ -12,16 +12,23 @@ body, html {
 }
 
 .custom-cursor {
-    position: fixed;
     margin-top: 8px;
     margin-left: 8px;
-    width: 16px; /* Adjust this to make the image fit within the desired boundary */
-    height: 16px; /* Adjust this to make the image fit within the desired boundary */
-    background: url('ASSETS/Main/Cursor.png') no-repeat center / contain;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
+    width: 18px;
+    height: 18px;
+    background: url('ASSETS/Main/Cursor.png') no-repeat center center;
+    background-size: contain;
+    position: fixed;
+    pointer-events: none; /* Prevent the cursor from blocking interactions */
+    z-index: 1000; /* Make sure it's on top of other elements */
     display: none; /* Initially hidden */
+    transform: translate(-50%, -50%); /* Center the custom cursor on the mouse position */
+}
+
+@media (min-width: 768px) {
+    .custom-cursor {
+        display: block; /* Show custom cursor for viewport wider than 768px */
+    }
 }
 
 .ripple {
@@ -73,8 +80,9 @@ body, html {
     .Back:hover{
         color: rgb(19, 19, 19);
         background-color: rgb(179, 255, 0);
+    }
 }
-}
+
 .main {
     width: calc(100% - 50px); /* Full width minus margin */
     height: 50px;

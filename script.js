@@ -107,21 +107,13 @@ function topFunction() {
 }
 
 
-var customCursor = document.getElementById('customCursor');
-
-document.addEventListener('mousemove', function(e) {
-    customCursor.style.left = e.clientX + 'px';
-    customCursor.style.top = e.clientY + 'px';
-    customCursor.style.display = 'block'; // Show the cursor when moving
+ // JavaScript to move the custom cursor
+ document.addEventListener('mousemove', function(e) {
+    const cursor = document.getElementById('customCursor');
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
 });
 
-document.addEventListener('mouseenter', function() {
-    customCursor.style.display = 'block'; // Show the cursor when entering the window
-});
-
-document.addEventListener('mouseleave', function() {
-    customCursor.style.display = 'none'; // Hide the cursor when leaving the window
-});
 
 document.addEventListener('click', function(e) {
     createRipple(e.clientX, e.clientY);
