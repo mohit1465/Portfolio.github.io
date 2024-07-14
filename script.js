@@ -114,6 +114,16 @@ function topFunction() {
     cursor.style.top = e.clientY + 'px';
 });
 
+window.addEventListener('mousemove', function(e) {
+    const cursor = document.getElementById('customCursor');
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    if (e.clientX < 0 || e.clientY < 0 || e.clientX > viewportWidth || e.clientY > viewportHeight) {
+        cursor.style.display = 'none'; // Hide the cursor if outside viewport
+    }
+});
+
 
 document.addEventListener('click', function(e) {
     createRipple(e.clientX, e.clientY);
@@ -133,3 +143,4 @@ function createRipple(x, y) {
         });
     }
 }
+
