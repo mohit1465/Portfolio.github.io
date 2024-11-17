@@ -114,6 +114,16 @@ function topFunction() {
     cursor.style.top = e.clientY + 'px';
 });
 
+window.addEventListener("mouseout", () => {
+    const cursor = document.getElementById('customCursor');
+    cursor.style.display = "none";
+});
+
+window.addEventListener("mouseover", () => {
+    const cursor = document.getElementById('customCursor');
+    cursor.style.display = "block";
+});
+
 window.addEventListener('mousemove', function(e) {
     const cursor = document.getElementById('customCursor');
     const viewportWidth = window.innerWidth;
