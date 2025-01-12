@@ -106,22 +106,11 @@ function topFunction() {
   });
 }
 
-
  // JavaScript to move the custom cursor
  document.addEventListener('mousemove', function(e) {
     const cursor = document.getElementById('customCursor');
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
-});
-
-window.addEventListener("mouseout", () => {
-    const cursor = document.getElementById('customCursor');
-    cursor.style.display = "none";
-});
-
-window.addEventListener("mouseover", () => {
-    const cursor = document.getElementById('customCursor');
-    cursor.style.display = "block";
 });
 
 window.addEventListener('mousemove', function(e) {
@@ -154,3 +143,45 @@ function createRipple(x, y) {
     }
 }
 
+
+
+// Hide sections by default
+document.addEventListener('DOMContentLoaded', function () {
+    const hiddenSections = document.querySelectorAll('.hidden-section');
+    hiddenSections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // When "Hey, I am Mohit" is clicked
+    const mainHeading = document.getElementById('mainHeading');
+    mainHeading.addEventListener('click', function () {
+        hiddenSections.forEach(section => {
+            section.style.display = 'block'; // Show hidden sections
+        });
+    });
+});
+
+function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => section.style.display = 'none');
+    
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+    
+    // Hide both "View All Work" and "View All Gallery" buttons
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => button.classList.add('hidden'));
+}
+
+
+// Initial load - show introduction
+window.onload = function() {
+    document.getElementById('introduction').style.display = 'block';
+    document.getElementById('gallery').style.display = 'block';
+    document.getElementById('work').style.display = 'block';
+    document.getElementById('about').style.display = 'block';
+    document.getElementById('why-me').style.display = 'block';
+    document.getElementById('contact').style.display = 'block';
+    document.getElementsByClassName('button').style.display = 'block';
+};

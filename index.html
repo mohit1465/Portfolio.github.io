@@ -4,12 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link
-            rel="icon"
-            href=
-"https://github.com/mohit1465/Portfolio.github.io/blob/f6b6315af0a9f8dc10a0e21a442a3e68c0bd4c1c/ASSETS/Main/DESIGN.gif"
-            type="image/x-icon"
-        />
     <title>Mohit's Portfolio</title>
     <meta name="description" content="Mohit's Portfolio - A passionate graphic designer with over 3 years of experience in creating high-quality digital and print designs.">
     <meta name="keywords" content="Graphic Design, Portfolio, Web Development, Mohit">
@@ -28,11 +22,11 @@
 
     <div class="main">
         <div class="text">
-            <h1>Hey, <span>I am Mohit</span></h1>
+            <h1 onclick="location.reload();" id="mainHeading">Hey, <span>I am Mohit</span></h1>
         </div>
         <ul class="nav">
-            <li><a class="nav-a" href="#gallery">Gallery</a></li>
-            <li><a class="nav-a" href="#work">My Work</a></li>
+            <li><a class="nav-a" onclick="showSection('gallery')">Gallery</a></li>
+            <li><a class="nav-a" onclick="showSection('work')">My Work</a></li>
             <li><a class="nav-a" href="#contact">Contact</a></li>
             <li><a class="nav-a" href="#about">About</a></li>
         </ul>
@@ -42,10 +36,10 @@
         </div>
     </div>
 
-    <div class="mob-nav"><a href="#gallery">Gallery</a></div>
-    <div class="mob-nav"><a href="#work">My Work</a></div>
-    <div class="mob-nav"><a href="#contact">Contact</a></div>
-    <div class="mob-nav"><a href="#about">About</a></div>
+    <div class="mob-nav" onclick="showSection('gallery')"><a>Gallery</a></div>
+    <div class="mob-nav" onclick="showSection('work')"><a>My Work</a></div>
+    <div class="mob-nav" href="#contact"><a>Contact</a></div>
+    <div class="mob-nav" href="#about"><a>About</a></div>
     
     <section id="introduction" class="section">
         <div class="container">
@@ -74,7 +68,7 @@
     <section id="gallery" class="section">
         <div class="container">
             <h2>My Gallery Highlights</h2>
-            <a href="#" class="button">View All Gallery</a>
+            <a onclick="showSection('gallery')" class="button">View All Gallery</a>
             <div class="gallery-images">
                 <img src="ASSETS/Poster/Gallery 2.png" alt="Gallery Image 1">
                 <img src="ASSETS/Poster/Gallery 1.png" alt="Gallery Image 2">
@@ -93,22 +87,22 @@
                     <p>Work details for image 1...</p>
                 </div>
                 <div class="work-item">
-                    <img src="ASSETS/Poster/BURGUR.png" alt="Work Image 2">
+                    <img src="ASSETS/Poster/Nirvana.png" alt="Work Image 2">
                     <h3>Work Title 2</h3>
                     <p>Work details for image 2...</p>
                 </div>
                 <div class="work-item">
-                    <img src="ASSETS/Poster/BURGUR.png" alt="Work Image 3">
+                    <img src="ASSETS/Poster/Music.png" alt="Work Image 3">
                     <h3>Work Title 3</h3>
                     <p>Work details for image 3...</p>
                 </div>
                 <div class="work-item">
-                    <img src="ASSETS/Poster/BURGUR.png" alt="Work Image 4">
+                    <img src="ASSETS/Poster/Beast.png" alt="Work Image 4">
                     <h3>Work Title 4</h3>
                     <p>Work details for image 4...</p>
                 </div>
                 <div class="work-item">
-                    <img src="ASSETS/Poster/BURGUR.png" alt="Work Image 4">
+                    <img src="ASSETS/Poster/L- shape.png" alt="Work Image 4">
                     <h3>Work Title 5</h3>
                     <p>Work details for image 5...</p>
                 </div>
@@ -118,7 +112,7 @@
                     <p>Work details for image 6...</p>
                 </div>
             </div>
-            <a href="#" class="button">View All Work</a>
+            <a onclick="showSection('work')" class="button">View All Work</a>
         </div>
     </section>    
 
@@ -141,7 +135,7 @@
             <p>mohitdahmewal@gmail.com</p>
             <p>+91 83075 21465</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/mohit-yadav-63a166276/"><img src="ASSETS/Logo/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://www.linkedin.com/in/mohit-y-63a166276/"><img src="ASSETS/Logo/linkedin-icon.png" alt="LinkedIn"></a>
                 <a href="https://wa.me/918307521465"><img src="ASSETS/Logo/WhatsApp-icon.png" alt="WhatsApp"></a>
             </div>
             <p>© 2024 Mohit Yadav. All rights reserved.</p>
