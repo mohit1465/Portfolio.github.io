@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <title>Mohit's Portfolio</title>
+    <meta name="description" content="Mohit's Portfolio - A passionate graphic designer with over 3 years of experience in creating high-quality digital and print designs.">
+    <meta name="keywords" content="Graphic Design, Portfolio, Web Development, Mohit">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop id="video-background">
+        <source src="ASSETS/Main/Background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <div class="Back" onclick="topFunction()" id="myBtn"><h1>^</h1>
+    </div>
+
+    <div class="main">
+        <div class="text">
+            <h1 onclick="location.reload();" id="mainHeading">Hey, <span>I am Mohit</span></h1>
+        </div>
+        <ul class="nav">
+            <li><a class="nav-a" href="#gallery">Gallery</a></li>
+            <li><a class="nav-a" href="#work">My Work</a></li>
+            <li><a class="nav-a" href="#contact">Contact</a></li>
+            <li><a class="nav-a" href="#about">About</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+        </div>
+
+        <div class="mob-menu">
+            <div class="mob-nav" href="#gallery"><a>Gallery</a></div>
+            <div class="mob-nav" href="#work"><a>My Work</a></div>
+            <div class="mob-nav" href="#contact"><a>Contact</a></div>
+            <div class="mob-nav" href="#about"><a>About</a></div>
+        </div>
+    </div>
+    
+    <section id="introduction" class="section fade-in">
+        <div class="container">
+            <h2>Introduction</h2>
+            <ul>
+                <li>Hi, I'm Mohit. I'm a passionate graphic designer with over 3 years of experience in creating high-quality digital and print designs. I studied Computer Science and Engineering, and I'm skilled in various aspects of design and development.</li>
+                <li><strong>Education:</strong> Bachelor of Technology in Computer Science and Engineering.</li>
+                <li><strong>Hobbies:</strong> Designing, Photography, Traveling, and Exploring new technologies.</li>
+                <li>I am constantly striving to improve my skills and stay updated with the latest trends in design and technology. My dedication to my craft and my desire to deliver the best results for my clients drives me to push the boundaries of creativity and innovation.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="why-me" class="section">
+        <div class="container">
+            <h2>Why Me?</h2>
+            <ul>
+                <li><strong>Experience:</strong> With over 3 years in the industry, I've honed my skills and gained valuable insights into what works and what doesn't.</li>
+                <li><strong>Versatility:</strong> My experience spans a wide range of design projects, from digital to print, ensuring I can handle any challenge you throw my way.</li>
+                <li><strong>Passion:</strong> Design is not just a job for me; it's a passion. I bring creativity and dedication to every project I undertake.</li>
+                <li><strong>Attention to Detail:</strong> I pride myself on my meticulous attention to detail, ensuring that every aspect of your project is perfect.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>My Gallery Highlights</h2>
+            <a href="#gallery" class="button">View All Gallery</a>
+            <div class="gallery-images">
+                <img src="ASSETS/Poster/Gallery 2.png" alt="Gallery Image 1">
+                <img src="ASSETS/Poster/Gallery 1.png" alt="Gallery Image 2">
+                <img src="ASSETS/Poster/Gallery 3.png" alt="Gallery Image 3">
+            </div>
+        </div>
+    </section>
+    
+    <section id="work" class="section">
+        <div class="container">
+            <h2>My Work</h2>
+
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Burgur King</h3>
+                        <p>A social media post on BURGUR King.</p>
+                    </div>
+                    <img src="ASSETS/Poster/BURGUR.png" alt="Work Image 1">
+                </div>
+            </div>
+
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Character Reveal</h3>
+                        <p>A social media post for Card Casa game character.</p>
+                    </div>
+                    <img src="ASSETS/Poster/Beast.png" alt="Work Image 1">
+                </div>
+            </div>
+
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Bhartiya College</h3>
+                        <p>A social media post for Bhartiya College.</p>
+                    </div>
+                    <img src="ASSETS/Poster/Bhartiya.png" alt="Work Image 1">
+                </div>
+            </div>
+
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">The Nirvana Palace 1</h3>
+                        <p>A social media post on The Nirvana Palace 1</p>
+                    </div>
+                    <img src="ASSETS/Poster/IMG-20231221-WA0007.jpg" alt="Work Image 1">
+                </div>
+            </div>
+
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">The Nirvana Palace 1</h3>
+                        <p>A social media post on The Nirvana Palace 2</p>
+                    </div>
+                    <img src="ASSETS/Poster/IMG_20240603_071436_720.jpg" alt="Work Image 1">
+                </div>
+            </div>
+
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Cover Post</h3>
+                        <p>Cover Poster of Music Beats song</p>
+                    </div>
+                    <img src="ASSETS/Poster/Music Beats Presents.png" alt="Work Image 1">
+                </div>
+            </div>
+
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Bhartiya College</h3>
+                        <p>Logo of Bhartiya College</p>
+                    </div>
+                    <img src="ASSETS/Poster/The Nirvana palace logo 2 (1).png" alt="Work Image 1">
+                </div>
+            </div>
+
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">social media post 1</h3>
+                        <p>post on special day and events </p>
+                    </div>
+                    <img src="ASSETS/Poster/कंवर सिंह यादव 10 dec.png" alt="Work Image 1">
+                </div>
+            </div>
+            
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">social media post 2</h3>
+                        <p>post on special day and events </p>
+                    </div>
+                    <img src="ASSETS/Poster/कंवर सिंह यादव 25 dec(2).png" alt="Work Image 1">
+                </div>
+            </div>
+            
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Minecraft</h3>
+                        <p>A thumbnail on Minecraft live stream.</p>
+                    </div>
+                    <img src="ASSETS/Poster/Minecraft live.png" alt="Work Image 1">
+                </div>
+            </div>
+
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">History of Elon Musk</h3>
+                        <p>A youtube thumbnail for video of History of Elon Musk.</p>
+                    </div>
+                    <img src="ASSETS/Poster/design.png" alt="Work Image 1">
+                </div>
+            </div>
+            
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Thumbnail</h3>
+                        <p>Thumbnail for a qna video.</p>
+                    </div>
+                    <img src="ASSETS/Poster/qna (1).png" alt="Work Image 1">
+                </div>
+            </div>
+            
+            <div class="work-images">
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Thumbnail</h3>
+                        <p>Thumbnail for "Funny Memes" yt video</p>
+                    </div>
+                    <img src="ASSETS/Poster/thumbnail hook 1 (2).png" alt="Work Image 1">
+                </div>
+            </div>
+            
+            <a href="#work" class="button">View All Work</a>
+        </div>
+    </section>   
+    
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <img id="popup-img" src="" alt="Popup Image">
+        <h3 id="popup-title">Title</h3>
+        <p id="popup-description">Description</p>
+    </div> 
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Want to Message Me?</h2>
+            <form>
+                <input type="text" name="name" placeholder="Name" aria-label="Name">
+                <input type="email" name="email" placeholder="Email" aria-label="Email">
+                <input type="text" name="phone" placeholder="Mobile No." aria-label="Phone">
+                <textarea name="message" placeholder="Message" aria-label="Message"></textarea>
+            </form>
+            <button type="submit" class="button">Send Message</button>
+        </div>
+    </section>
+
+    <footer id="about" align="center">
+        <div class="container">
+            <h2>Here is Info about me</h2>
+            <p>mohitdahmewal@gmail.com</p>
+            <p>+91 83075 21465</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mohit-y-63a166276/"><img src="ASSETS/Logo/linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://wa.me/918307521465"><img src="ASSETS/Logo/WhatsApp-icon.png" alt="WhatsApp"></a>
+            </div>
+            <p>© 2024 Mohit Yadav. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kaushan+Script&display=swap');
+
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+body, html {
+    cursor: none;
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    background-color: rgba(255, 255, 255, 0.144);
+    color: black;
+    font-size: 16px; /* Increased base font size */
+    overflow:auto;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: invert(100%);
+}
+
+.hidden {
+    display: none;
+}
+
+.custom-cursor {
+    background-color: rgba(255, 255, 255, 0.21);
+    margin-top: 8px;
+    margin-left: 8px;
+    width: 18px;
+    height: 18px;
+    background: url('ASSETS/Main/Cursor.png') no-repeat center center;
+    background-size: contain;
+    position: fixed;
+    pointer-events: none; /* Prevent the cursor from blocking interactions */
+    z-index: 1000; /* Make sure it's on top of other elements */
+    display: none; /* Initially hidden */
+    transform: translate(-50%, -50%); /* Center the custom cursor on the mouse position */
+    transition: transform 0.1s ease;
+}
+
+@media (min-width: 768px) {
+    .custom-cursor {
+        display: block; /* Show custom cursor for viewport wider than 768px */
+    }
+}
+
+.ripple {
+    position: fixed;
+    margin-top: 40px;
+    margin-left: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 94, 0); /* Adjust color as needed */
+    pointer-events: none;
+    animation: ripple-animation 1s linear;
+    opacity: 0;
+}
+
+@keyframes ripple-animation {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    to {
+        width: 100px; /* Adjust size as needed */
+        height: 100px; /* Adjust size as needed */
+        opacity: 0;
+    }
+}
+
+.Back{
+    cursor: none;
+    position: fixed;
+    bottom: 30px;
+    z-index: 99;
+    right: 4%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.118);
+    border-radius: 40px;
+    border: rgb(255, 94, 0) solid 2px;
+    display: none;
+    transition: .3s ease-in-out;
+}
+
+.Back h1{
+    cursor: none;
+    color: rgb(255, 94, 0);
+    text-align: center;
+    font-size: 50px;
+    margin-top: -5px;
+
+}
+
+@media (min-width: 768px) {
+    .Back:hover{
+        cursor: none;
+        color: rgb(19, 19, 19);
+        background-color: rgb(255, 94, 0);
+    }
+    
+    .Back h1:hover{
+        color: rgb(255, 255, 255);
+    }
+}
+
+.main {
+    position: fixed;
+    cursor: none;
+    width: calc(100% - 50px); /* Full width minus margin */
+    min-height: 70px;
+    background-color: rgba(236, 236, 236, 0.795);
+    border-radius: 25px;
+    margin: 25px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: rgb(0, 0, 0); /* Text color */
+    box-sizing: border-box;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border: .1px solid rgba(255, 255, 255, 0.527);
+    transition: transform 3s ease-in-out;
+}
+
+.main .text {
+    font-size: 16px; /* Adjust text size as needed */
+}
+.main .nav {
+    position: fixed;
+    right: 20px;
+    top: 16px;
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between navigation items */
+}
+.main .nav a {
+    cursor: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.hamburger {
+    position: fixed;
+    right: 20px;
+    top: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 17px; /* Adjusted height */
+    cursor: pointer;
+}
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transition: transform 0.3s;
+}
+.cross .bar1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.cross .bar2 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mob-nav {
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    margin: 10px 0; /* Adjust margin as needed */
+    display: none; /* Initially hidden */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    color: rgb(0, 0, 0); /* Text color */
+    box-sizing: border-box;
+    animation-duration: 0.75s ease-out; /* Duration of animation */
+    animation-fill-mode: forwards; /* Animation fill mode */
+    margin-bottom: 15px
+}
+
+.mob-nav a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .main .nav {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .mob-nav {
+        display: none;
+    }
+    .cross .mob-nav:nth-child(2) {
+        display: flex;
+        animation: slideInRight 1s forwards;
+    }
+    .cross .mob-nav:nth-child(3) {
+        animation-delay: 0.5s; /* Delay for second .mob-nav */
+    }
+    .cross .mob-nav:nth-child(4) {
+        animation-delay: 1s; /* Delay for third .mob-nav */
+    }
+    .cross .mob-nav:nth-child(5) {
+        animation-delay: 1.5s; /* Delay for fourth .mob-nav */
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.mob-nav {
+    cursor: none;
+    display: none;
+}
+
+.container {
+    cursor: none;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 1s ease-out; /* Adjusted transition duration */
+    transform: translateY(0); /* Initial position */
+    opacity: 1; /* Initial opacity */
+}
+
+.hide-content {
+    cursor: none;
+    transform: translateY(25px); /* Adjust the amount of movement down */
+    opacity: 0; /* Fade out content */
+}
+
+
+.container h2{
+    cursor: none;
+    color: rgb(255, 94, 0);
+    font-family: "Kaushan Script", cursive;
+}
+
+.nav-a::after {
+    cursor: none;
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    color: black;
+    background: rgb(255, 94, 0);
+    transition: width 0.4s ease;
+}
+
+.nav-a:hover::after {
+    cursor: none;
+    width: 100%;
+    left: 0;
+    color: rgb(255, 94, 0);
+    background: rgb(255, 94, 0);
+}
+
+.section {
+    cursor: none;
+    padding: 60px 20px;
+    background:  transparent;
+    margin: 20px 0;
+}
+
+.main h1 span {
+    color: rgb(255, 94, 0);
+    font-family: "Kaushan Script", cursive;
+}
+
+h2 {
+    font-size: 26px; /* Increased font size */
+    margin-bottom: 20px;
+}
+
+.section p, .section ul, .section form {
+    cursor: none;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 18px; /* Increased font size */
+}
+
+.section ul {
+    list-style-type: none;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.section ul li {
+    margin-bottom: 15px;
+}
+
+#introduction{
+    margin-top: 90px;
+}
+
+.button {
+    cursor: none;
+    display: inline-block;
+    margin: 20px 0;
+    background-color: transparent;
+    padding: 15px 25px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    font-size: 16px; /* Increased font size */
+    transition: all 0.4s;
+}
+
+.button:hover {
+    background: black;
+    color: rgb(255, 255, 255);
+}
+
+.gallery-images {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.gallery-images img {
+    width: 300px; /* Adjusted width */
+    height: 600px; /* Maintain 1:2 aspect ratio */
+    object-fit: cover; /* Ensures the image is cropped to fit the aspect ratio */
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+h2 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.work-images{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50;
+}
+
+.work-item{
+    width: 70vw;
+    max-width: 500px;
+    min-height: 500px;
+    border-radius: 25px;
+    margin: 50px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    justify-items: center;
+}
+
+.work-item img{
+    min-width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.work-details{
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    height: 100px;
+    transform: translateY(-100%);
+    background-color: #0000002c;
+    border-top: .1px solid rgba(255, 255, 255, 0.219);
+    backdrop-filter: blur(3px);
+    border-radius: 0 0 25px 25px;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+
+
+
+.container h2{
+    color: rgb(255, 94, 0);
+    font-family: "Kaushan Script", cursive;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Container styling */
+#contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form styling */
+#contact form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#contact input{
+    cursor: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #000000;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    width: 250%;
+    max-width: 250%;
+    box-sizing: border-box;
+    transition: .5s ease-in-out;
+}
+
+#contact textarea {
+    cursor: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #000000;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    width: 250%;
+    max-width: 250%;
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+}
+
+#contact textarea {
+    height: 100px;
+    resize: vertical;
+    overflow: auto;
+}
+
+@media (min-width: 768px) {
+    #contact input:hover{
+        border: rgb(255, 94, 0) solid 1px;
+        border-radius: 0px;
+    }
+    #contact textarea:hover{
+        border: rgb(255, 94, 0) solid 1px;
+        border-radius: 0px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    #contact .container {
+        padding: 10px;
+    }
+
+    #contact h2 {
+        font-size: 26px;
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 16px;
+        width: 130%;
+    }
+
+    .work-item{
+        width: 200px;
+        max-width: 500px;
+        min-height: 200px;
+        border-radius: 25px;
+        margin: 10px;
+    }
+
+    .work-item img{
+        min-width: 400px;
+        height: 300px;
+        object-fit:cover;
+        border-radius: 25px;
+    }
+
+    .work-details{
+        height: 100px;
+        font-size: 15px;
+    }
+    
+}
+
+
+
+
+
+/* Hover Effect - Circle Button */
+.hover-circle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.137);
+    border: 0.1px solid rgba(255, 255, 255, 0.692);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.hover-circle::after {
+    content: "→";
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-circle:hover {
+    background-color: #fff;
+}
+
+.hover-circle:hover::after {
+    color: black;
+    transform: rotate(-45deg);
+}
+
+.work-item:hover .hover-circle {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.popup-box h3 {
+    margin: 10px 0;
+}
+
+.popup-box p {
+    color: #666;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: darkred;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index:99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background: rgba(255, 255, 255, 0.118);
+    color: black;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 15px 0;
+    font-size: 18px; /* Increased font size */
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-links a {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.social-links a img{
+    cursor: none;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .section p, .section ul, .section form {
+        text-align: center;
+    }
+
+    .hover-circle{
+        opacity: 1;
+    }
+
+    .hover-circle::after {
+        content: "→";
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .hover-circle {
+        background-color: #fff;
+    }
+
+    .hover-circle::after {
+        color: black;
+        transform: rotate(-45deg);
+    }
+
+    .work-item:hover .hover-circle {
+        opacity: 1;
+    }
+}

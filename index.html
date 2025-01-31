@@ -7,6 +7,7 @@
     <title>Mohit's Portfolio</title>
     <meta name="description" content="Mohit's Portfolio - A passionate graphic designer with over 3 years of experience in creating high-quality digital and print designs.">
     <meta name="keywords" content="Graphic Design, Portfolio, Web Development, Mohit">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,8 +26,8 @@
             <h1 onclick="location.reload();" id="mainHeading">Hey, <span>I am Mohit</span></h1>
         </div>
         <ul class="nav">
-            <li><a class="nav-a" onclick="showSection('gallery')">Gallery</a></li>
-            <li><a class="nav-a" onclick="showSection('work')">My Work</a></li>
+            <li><a class="nav-a" href="#gallery">Gallery</a></li>
+            <li><a class="nav-a" href="#work">My Work</a></li>
             <li><a class="nav-a" href="#contact">Contact</a></li>
             <li><a class="nav-a" href="#about">About</a></li>
         </ul>
@@ -34,14 +35,16 @@
             <div class="bar1"></div>
             <div class="bar2"></div>
         </div>
-    </div>
 
-    <div class="mob-nav" onclick="showSection('gallery')"><a>Gallery</a></div>
-    <div class="mob-nav" onclick="showSection('work')"><a>My Work</a></div>
-    <div class="mob-nav" href="#contact"><a>Contact</a></div>
-    <div class="mob-nav" href="#about"><a>About</a></div>
+        <div class="mob-menu">
+            <div class="mob-nav" href="#gallery"><a>Gallery</a></div>
+            <div class="mob-nav" href="#work"><a>My Work</a></div>
+            <div class="mob-nav" href="#contact"><a>Contact</a></div>
+            <div class="mob-nav" href="#about"><a>About</a></div>
+        </div>
+    </div>
     
-    <section id="introduction" class="section">
+    <section id="introduction" class="section fade-in">
         <div class="container">
             <h2>Introduction</h2>
             <ul>
@@ -68,7 +71,7 @@
     <section id="gallery" class="section">
         <div class="container">
             <h2>My Gallery Highlights</h2>
-            <a onclick="showSection('gallery')" class="button">View All Gallery</a>
+            <a href="#gallery" class="button">View All Gallery</a>
             <div class="gallery-images">
                 <img src="ASSETS/Poster/Gallery 2.png" alt="Gallery Image 1">
                 <img src="ASSETS/Poster/Gallery 1.png" alt="Gallery Image 2">
@@ -80,41 +83,137 @@
     <section id="work" class="section">
         <div class="container">
             <h2>My Work</h2>
+
             <div class="work-images">
                 <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Burgur King</h3>
+                        <p>A social media post on BURGUR King.</p>
+                    </div>
                     <img src="ASSETS/Poster/BURGUR.png" alt="Work Image 1">
-                    <h3>Work Title 1</h3>
-                    <p>Work details for image 1...</p>
                 </div>
+                
                 <div class="work-item">
-                    <img src="ASSETS/Poster/Nirvana.png" alt="Work Image 2">
-                    <h3>Work Title 2</h3>
-                    <p>Work details for image 2...</p>
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Character Reveal</h3>
+                        <p>A social media post for Card Casa game character.</p>
+                    </div>
+                    <img src="ASSETS/Poster/Beast.png" alt="Work Image 1">
                 </div>
+                
                 <div class="work-item">
-                    <img src="ASSETS/Poster/Music.png" alt="Work Image 3">
-                    <h3>Work Title 3</h3>
-                    <p>Work details for image 3...</p>
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Bhartiya College</h3>
+                        <p>A social media post for Bhartiya College.</p>
+                    </div>
+                    <img src="ASSETS/Poster/Bhartiya.png" alt="Work Image 1">
                 </div>
+                
                 <div class="work-item">
-                    <img src="ASSETS/Poster/Beast.png" alt="Work Image 4">
-                    <h3>Work Title 4</h3>
-                    <p>Work details for image 4...</p>
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">The Nirvana Palace 1</h3>
+                        <p>A social media post on The Nirvana Palace 1</p>
+                    </div>
+                    <img src="ASSETS/Poster/IMG-20231221-WA0007.jpg" alt="Work Image 1">
                 </div>
+                
                 <div class="work-item">
-                    <img src="ASSETS/Poster/L- shape.png" alt="Work Image 4">
-                    <h3>Work Title 5</h3>
-                    <p>Work details for image 5...</p>
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">The Nirvana Palace 1</h3>
+                        <p>A social media post on The Nirvana Palace 2</p>
+                    </div>
+                    <img src="ASSETS/Poster/IMG_20240603_071436_720.jpg" alt="Work Image 1">
                 </div>
+                
                 <div class="work-item">
-                    <img src="ASSETS/Poster/BURGUR.png" alt="Work Image 4">
-                    <h3>Work Title 6</h3>
-                    <p>Work details for image 6...</p>
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Cover Post</h3>
+                        <p>Cover Poster of Music Beats song</p>
+                    </div>
+                    <img src="ASSETS/Poster/Music Beats Presents.png" alt="Work Image 1">
+                </div>
+                
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Bhartiya College</h3>
+                        <p>Logo of Bhartiya College</p>
+                    </div>
+                    <img src="ASSETS/Poster/The Nirvana palace logo 2 (1).png" alt="Work Image 1">
+                </div>
+                
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">social media post 1</h3>
+                        <p>post on special day and events </p>
+                    </div>
+                    <img src="ASSETS/Poster/कंवर सिंह यादव 10 dec.png" alt="Work Image 1">
+                </div>
+                
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">social media post 2</h3>
+                        <p>post on special day and events </p>
+                    </div>
+                    <img src="ASSETS/Poster/कंवर सिंह यादव 25 dec(2).png" alt="Work Image 1">
+                </div>
+                
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Minecraft</h3>
+                        <p>A thumbnail on Minecraft live stream.</p>
+                    </div>
+                    <img src="ASSETS/Poster/Minecraft live.png" alt="Work Image 1">
+                </div>
+                
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">History of Elon Musk</h3>
+                        <p>A youtube thumbnail for video of History of Elon Musk.</p>
+                    </div>
+                    <img src="ASSETS/Poster/design.png" alt="Work Image 1">
+                </div>
+
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Thumbnail</h3>
+                        <p>Thumbnail for a qna video.</p>
+                    </div>
+                    <img src="ASSETS/Poster/qna (1).png" alt="Work Image 1">
+                </div>
+
+                <div class="work-item">
+                    <div class="hover-circle" onclick="openPopup(this)"></div>
+                    <div class="work-details">
+                        <h3 style="padding: 0; margin: 0; text-align: left;">Thumbnail</h3>
+                        <p>Thumbnail for "Funny Memes" yt video</p>
+                    </div>
+                    <img src="ASSETS/Poster/thumbnail hook 1 (2).png" alt="Work Image 1">
                 </div>
             </div>
-            <a onclick="showSection('work')" class="button">View All Work</a>
+            
+            <a href="#work" class="button">View All Work</a>
         </div>
-    </section>    
+    </section>   
+    
+    <div class="overlay" onclick="closePopup()"></div>
+    <div class="popup-box">
+        <button class="close-btn" onclick="closePopup()">×</button>
+        <img id="popup-img" src="" alt="Popup Image">
+        <h3 id="popup-title">Title</h3>
+        <p id="popup-description">Description</p>
+    </div> 
 
     <section id="contact" class="section">
         <div class="container">

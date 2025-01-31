@@ -1,20 +1,20 @@
 var animationSpeed = 1000; // Adjust animation speed in milliseconds (1s = 1000ms)
 
-document.addEventListener('contextmenu', event=> event.preventDefault()); 
-document.onkeydown = function(e) { 
-if(event.keyCode == 123) { 
-return false; 
-} 
-if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
-return false; 
-} 
-if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
-return false; 
-} 
-if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
-return false; 
-} 
-} 
+// document.addEventListener('contextmenu', event=> event.preventDefault()); 
+// document.onkeydown = function(e) { 
+// if(event.keyCode == 123) { 
+// return false; 
+// } 
+// if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+// return false; 
+// } 
+// if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+// return false; 
+// } 
+// if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+// return false; 
+// } 
+// } 
 
 function toggleMenu() {
     var hamburger = document.getElementById('hamburger');
@@ -185,3 +185,71 @@ window.onload = function() {
     document.getElementById('contact').style.display = 'block';
     document.getElementsByClassName('button').style.display = 'block';
 };
+
+
+const fadeInElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing after animation
+            }
+        });
+    },
+    { threshold: 0.1 } // Trigger animation when 10% of the element is visible
+);
+
+fadeInElements.forEach(el => observer.observe(el));
+
+
+gsap.from(".work-item", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: ".work-images",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+function openPopup(element) {
+    // Find the parent work-item
+    let workItem = element.closest('.work-item');
+
+    // Get image, title, and description
+    let imgSrc = workItem.querySelector('img').src;
+    let title = workItem.querySelector('h3').innerText;
+    let description = workItem.querySelector('p').innerText;
+
+    // Update the popup content
+    document.getElementById('popup-img').src = imgSrc;
+    document.getElementById('popup-title').innerText = title;
+    document.getElementById('popup-description').innerText = description;
+
+    // Show the popup and overlay
+    document.querySelector('.popup-box').style.display = 'flex';
+    document.querySelector('.overlay').style.display = 'block';
+}
+
+function closePopup() {
+    document.querySelector('.popup-box').style.display = 'none';
+    document.querySelector('.overlay').style.display = 'none';
+}
+
+
